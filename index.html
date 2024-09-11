@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Image Form</title>
+    <style>
+        
+        </style>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+
+    <h1>Registration</h1>
+      
+    <form id="carForm"></form>
+ 
+
+        <label for="RegistrationNumber">Registration Number:</label>
+        <input type="text" id="RegistrationNumber" name="RegistrationNumber" required>
+    
+        <label for="MODEL">MODEL:</label>
+        <input type="text" id="MODEL" name="MODEL" required>
+
+        <label for="Year">Year:</label>
+        <input type="text" id="year">
+
+        <label>Transmission:</label>
+        <select id="transmission">
+            <option>Automatic</option>
+            <option>Manual</option>
+        </select>
+
+        <label>Odometer:</label>
+        <input type="number" id="odometer"><br><br>
+
+        <label>Colour:</label>
+        <input type="text" id="Colour"><br><br>
+
+        <label>Fuel:</label>
+        <select id="fuel">
+            <option>Petrol</option>
+            <option>Diesel</option>
+            <option>Electric</option>
+            <option>Hybrid</option>
+            <option>Cng</option>
+            <option>Lpg</option>
+        </select><br><br>
+
+        <label>RTO:</label>
+        <input type="text" id="rto"><br><br>
+
+        <label>Vehicle Type:</label>
+        <input type="text" id="vehicleType"><br><br>
+
+        <label>Manufacturing Month/Year:</label>
+        <input type="text" id="manufacturingDate" placeholder="MM/YYYY"><br><br>
+
+        <label>RCStatus:</label>
+        <select id="">
+            <option>Good</option>
+            <option>Duplicate</option>
+            <option>Photocopy</option>
+            <option>Lost</option>
+        </select><br><br>
+
+        <label>Insurance:</label>
+        <select id="insurance">
+            <option>Comprehensive</option>
+            <option>TP</option>
+            <option>Zero Dip</option>
+        </select>
+
+        <label>HPAStatus:</label>
+        <input type="text" id="hpaStatus">
+        
+        <label>Chassis Number:</label>
+        <input type="text" id="chassisNumber"><br><br
+
+
+
+   <label for="engineNumber">Engine Number</label>
+   <input type="text" id="engineNumber">
+
+   <label for="vehicleStatus">Vehicle Status</label>
+   <input type="text" id="vehicleStatus">
+
+   <label for="businessType">Business Type</label>
+   <input type="text" id="businessType">
+
+   <label for="requested by">requested by</label>
+   <input type="text" id="reportrequestedby">
+
+   <label for="loanNumber">Loan Number</label>
+   <input type="text" id="loanNumber">
+
+   <label for="inspectionLocation">Inspection location</label>
+   <input type="text" id="inspectionLocation">
+</div>
+
+
+    
+   <h2>Exterior</h2>
+   <label>apronLH:</label>
+   <input type="checkbox" id="apronLHGood" value="Good"> Good
+   <input type="checkbox" id="apronLHReplaced" value="Replaced"> Replaced
+   <input type="checkbox" id="apronLHRepaired" value="Repaired"> Repaired
+   <input type="checkbox" id="apronLHGood" value="Majorcorrosion">Major corrosion
+   <input type="checkbox" id="apronLHGood" value="Minorcorrosion"> Minor corrosion
+
+<br>
+  <label>apronLHLeg</label>
+  
+  <br>
+   <input type="checkbox" id="apronLHLegGood" value="Good"> Good
+   <input type="checkbox" id="apronLHLegReplaced" value="Replaced"> Replaced
+   <input type="checkbox" id="apronLHLegRepaired" value="Repaired"> Repaired
+   <input type="checkbox" id="apronLHLegMajorcorrosion" value="Majorcorrosion">Majorcorrosion
+   <input type="checkbox" id="apronLHLegMinorcorrosion" value="Minorcorrosion"> Minorcorrosion
+   <br>
+
+  <label>apronRH:</label><br><br>
+   <input type="checkbox" id="apronRHGood" value="Good"> Good
+   <input type="checkbox" id="apronRHReplaced" value="Replaced"> Replaced
+   <input type="checkbox" id="apronRHRepaired" value="Repaired"> Repaired
+   <input type="checkbox" id="apronRHGood" value="Majorcorrosion">Major corrosion
+   <input type="checkbox" id="apronRHLegGood" value="Minorcorrosion"> Minor corrosion
+   <br>
+
+
+  <label>apronRHLeg:</label><br><br>
+   <input type="checkbox" id="apronRHLegGood" value="Good"> Good
+   <input type="checkbox" id="apronRHLegReplaced" value="Replaced"> Replaced
+   <input type="checkbox" id="apronRHLegRepaired" value="Repaired"> Repaired
+   <input type="checkbox" id="apronRHLegGood" value="Majorcorrosion">Major corrosion
+   <input type="checkbox" id="apronRHLegGood" value="Minorcorrosion"> Minor corrosion
+
+   <br>
+
+
+   <label>Strut tower LH:</label><br><br>
+   <input type="checkbox" id="StruttoweLHrGood" value="Good"> Good
+   <input type="checkbox" id="StruttowerLHReplaced" value="Replaced"> Replaced
+   <input type="checkbox" id="StruttowerLHRepaired" value="Repaired"> Repaired
+   <input type="checkbox" id="StruttowerLHGood" value="Majorcorrosion">Major corrosion
+   <input type="checkbox" id="StruttowerLHGood" value="Minorcorrosion"> Minor corrosion
+   <br>
+
+ <label>Strut tower RH:</label><br><br>
+   <input type="checkbox" id="Strut towerRHGood" value="Good"> Good
+   <input type="checkbox" id="Strut towerRHReplaced" value="Replaced"> Replaced
+   <input type="checkbox" id="Strut towerRHRepaired" value="Repaired"> Repaired
+   <input type="checkbox" id="Strut towerRHGood" value="Majorcorrosion">Major corrosion
+   <input type="checkbox" id="Strut towerRHGood" value="Minorcorrosion"> Minor corrosion
+   <br>
+
+    <label>Rear leg RH:</label><br><br>
+   <input type="checkbox" id="RearlegRHGood" value="Good"> Good
+   <input type="checkbox" id="RearlegRHReplaced" value="Replaced"> Replaced
+   <input type="checkbox" id="RearlegRHRepaired" value="Repaired"> Repaired
+   <input type="checkbox" id="RearlegRHMajorcorrosion" value="Majorcorrosion">Major corrosion
+   <input type="checkbox" id="RearlegRHMinorcorrosion" value="Minorcorrosion"> Minor corrosion
+   <br>
+
+  
+    <label>Rear leg LH:</label><br>
+    
+    <br>
+   <input type="checkbox" id="RearlegLHGood" value="Good"> Good
+   <input type="checkbox" id="RearlegLHReplaced" value="Replaced"> Replaced
+   <input type="checkbox" id="RearlegLHRepaired" value="Repaired"> Repaired
+   <input type="checkbox" id="RearlegLHMajorcorrosion" value="Majorcorrosion">Major corrosion
+   <input type="checkbox" id="RearlegLHMinorcorrosion" value="Minorcorrosion"> Minor corrosion
+   <br>
+</div>
+
+
+   <h2>Engine</h2>
+   <label for="backcombution">Backcombution</label><br><br>
+   <select id="backcombution">
+       <option value="NO">NO</option>
+       <option value="Good">Good</option>
+       <option value="Major">Major</option>
+       <option value="Minor">Minor</option>
+       <option value="Yes">Yes</option>
+   </select>
+<br><br>
+   <label for="smoke">Smoke</label>
+   <select id="smoke">
+       <option value="NO">NO</option>
+       <option value="Good">Good</option>
+       <option value="Major">Major</option>
+       <option value="Minor">Minor</option>
+       <option value="Yes">Yes</option>
+   </select>
+<br><br>
+   <label for="oilLevel">Oil Level</label>
+   <select id="oilLevel">
+       <option value="NO">NO</option>
+       <option value="Good">Good</option>
+       <option value="Major">Major</option>
+       <option value="Minor">Minor</option>
+       <option value="Yes">Yes</option>
+   </select>
+
+   <label for="engineOverall">Engine Overall</label>
+   <select id="engineOverall">
+       <option value="NO">NO</option>
+       <option value="Good">Good</option>
+       <option value="Major">Major</option>
+       <option value="Minor">Minor</option>
+       <option value="Yes">Yes</option>
+   </select>
+
+   <label for="timing">Timing</label>
+   <select id="timing">
+       <option value="NO">NO</option>
+       <option value="Good">Good</option>
+       <option value="Major">Major</option>
+       <option value="Minor">Minor</option>
+       <option value="Yes">Yes</option>
+   </select>
+
+   <label for="engineNoise">Engine noise</label>
+   <select id="engineNoise">
+       <option value="NO">NO</option>
+       <option value="Good">Good</option>
+       <option value="Major">Major</option>
+       <option value="Minor">Minor</option>
+       <option value="Yes">Yes</option>
+   </select>
+
+   <label for="leakage">Leakage</label>
+   <select id="leakage">
+       <option value="NO">NO</option>
+       <option value="Good">Good</option>
+       <option value="Major">Major</option>
+       <option value="Minor">Minor</option>
+       <option value="Yes">Yes</option>
+   </select>
+
+   <label for="coolant">Coolant</label>
+   <select id="coolant">
+       <option value="NO">NO</option>
+       <option value="Good">Good</option>
+       <option value="Major">Major</option>
+       <option value="Minor">Minor</option>
+       <option value="Yes">Yes</option>
+   </select>
+
+   <label for="majorIssueRemark">Major issue Remark</label>
+   <textarea id="majorIssueRemark"></textarea>
+
+   <label for="minorIssueRemark">Minor issue Remark</label>
+   <textarea id="minorIssueRemark"></textarea>
+</div>
+
+<div class="section">
+   <h2>Transmission</h2>
+   <label for="gearBox">Gear box</label>
+   <input type="text" id="gearBox">
+
+   <label for="clutch">Clutch</label>
+   <input type="text" id="clutch">
+
+   <label for="gear">Gear</label>
+   <input type="text" id="gear">
+
+   <label for="majorIssueGearBox">Major Issue Gear box</label>
+   <input type="text" id="majorIssueGearBox">
+
+   <label for="minorIssueGearBox">Minor Issue Gear box</label>
+   <input type="text" id="minorIssueGearBox">
+</div>
+
+<div class="section">
+   <h2>Structure</h2>
+   <label for="headLamps">Head lamps</label>
+   <input type="text" id="headLamps">
+
+   <label for="fogLamp">Fog Lamp</label>
+   <input type="text" id="fogLamp">
+
+   <label for="frontBonnet">Front Bonnet</label>
+   <input type="text" id="frontBonnet">
+
+   <label for="bumperFront">Bumper Front</label>
+   <input type="text" id="bumperFront">
+
+   <label for="rightSideFender">Right side Fender</label>
+   <input type="text" id="rightSideFender">
+
+   <label for="frontRightDoor">Front Right door</label>
+   <input type="text" id="frontRightDoor">
+
+   <label for="rearRightDoor">Rear Right door</label>
+   <input type="text" id="rearRightDoor">
+
+   <label for="rightQuarterPanel">Right Quarter panel</label>
+   <input type="text" id="rightQuarterPanel">
+
+   <label for="rightRunningBoard">Right running board</label>
+   <input type="text" id="rightRunningBoard">
+
+   <label for="dickyDoor">Dicky door</label>
+   <input type="text" id="dickyDoor">
+
+   <label for="dickyFloor">Dicky Floor</label>
+   <input type="text" id="dickyFloor">
+
+   <label for="dickyBackPanel">Dicky Back panel</label>
+   <input type="text" id="dickyBackPanel">
+
+   <label for="roof">Roof</label>
+   <input type="text" id="roof">
+
+   <label for="rearBumper">Rear Bumper</label>
+   <input type="text" id="rearBumper">
+
+   <label for="rearLeftDoor">Rear Left door</label>
+   <input type="text" id="rearLeftDoor">
+
+   <label for="frontLeftDoor">Front Left door</label>
+   <input type="text" id="frontLeftDoor">
+
+   <label for="leftSideFender">Left Side Fender</label>
+   <input type="text" id="leftSideFender">
+</div>
+<input type="checkbox" id="toggle">
+<label for="toggle">Interior</label>
+<div class="toggle-content">
+    
+    
+   <h2>Interior</h2>
+
+
+   <label for="flood">Flood</label>
+   <select id="flood">
+       <option value="Yes">Yes</option>
+       <option value="No">No</option>
+   </select>
+
+   <label for="electricalComponent">Electrical Component</label>
+   <input type="text" id="electricalComponent">
+
+   <label for="dashboard">Dashboard</label>
+   <input type="text" id="dashboard">
+
+
+<label for= "Warning light">Warning light</label>
+<input type="checkbox" id="warningLightsABSWarning"     value="ABS Warning">ABS Warning
+<input type="checkbox" id="warningLightsEPCWarning"     value="EPC Warning">EPC Warning
+<input type="checkbox" id="warningLightsnoWarninglight" value="No Warning light">No Warning light
+<br><br>
+  
+   <label for="interiorComments">Interior Comments</label>
+   <textarea id="interiorComments"></textarea><br>
+</div>
+
+
+   <label for="testDrive">Test Drive</label>
+   <select>
+       <option value="Running condition">Running condition</option>
+       <option value="Vehicle breakdown">Vehicle breakdown</option>
+   </select>
+
+  
+
+<div class="section">
+   <h2>Images</h2>
+   <label for="image1">Image 1</label>
+   <input type="file" id="image1" accept="image/*" onchange="loadImage(event, 'imageContainer1')">
+   <div id="imageContainer1" class="image-container"></div>
+
+   <label for="image2">Image 2</label>
+   <input type="file" id="image2" accept="image/*" onchange="loadImage(event, 'imageContainer2')">
+   <div id="imageContainer2" class="image-container"></div>
+
+   <label for="image3">Image 3</label>
+   <input type="file" id="image3" accept="image/*" onchange="loadImage(event, 'imageContainer3')">
+   <div id="imageContainer3" class="image-container"></div>
+
+   <!-- Repeat for more images -->
+</div>
+
+<div class="section">
+   <h2>Ratings</h2>
+   <label for="engineRating">Engine Rating</label>
+   <select id="engineRating">
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="4">4</option>
+       <option value="5">5</option>
+   </select>
+
+   <label for="exteriorRating">Exterior Rating</label>
+   <select id="exteriorRating">
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="4">4</option>
+       <option value="5">5</option>
+   </select>
+
+   <label for="interiorRating">Interior Rating</label>
+   <select id="interiorRating">
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="4">4</option>
+       <option value="5">5</option>
+   </select>
+
+   <label for="transmissionRating">Transmission Rating</label>
+   <select id="transmissionRating">
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="4">4</option>
+       <option value="5">5</option>
+   </select>
+</div>
+    
+
+
+        <label for="carImage">Upload Image:</label>
+        <input type="file" id="carImage" name="carImage" accept="image/*" required><br><br>
+
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br><br>
+
+
+
+        <button type="button" onclick="generatePDF()">Generate PDF</button>
+        
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="/script.js"></script>
+</form> 
+    </body>
+   </html>
