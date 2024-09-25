@@ -10,7 +10,6 @@
 </head>
 <body>
     <link rel="stylesheet" href="style.css">
-
     <h1>Registration</h1>
       
     <form id="carForm"></form>
@@ -18,9 +17,18 @@
 
         <label for="RegistrationNumber">Registration Number:</label>
         <input type="text" id="RegistrationNumber" name="RegistrationNumber" required>
-    
-        <label for="MODEL">MODEL:</label>
+
+        <label for="Ex-ShowroomPrice">Ex-ShowroomPrice:</label>
+        <input type="text" id="ExShowroomPrice" name="Ex-ShowroomPrice"
+
+        <label for="Manufature name">Manufature name:</label>
+        <input type="text" id="Manufaturename" name="Manufature name" 
+
+        <label for="MODEL">Model:</label>
         <input type="text" id="MODEL" name="MODEL" required>
+
+        <label for="varrient">varrient:</label>
+        <input type="text" id="varrient" name="varrient" 
 
         <label for="Year">Year:</label>
         <input type="text" id="year">
@@ -368,22 +376,13 @@
 
 <div class="section">
    <h2>Images</h2>
-   <label for="image1">Image 1</label>
-   <input type="file" id="image1" accept="image/*" onchange="loadImage(event, 'imageContainer1')">
-   <div id="imageContainer1" class="image-container"></div>
-
-   <label for="image2">Image 2</label>
-   <input type="file" id="image2" accept="image/*" onchange="loadImage(event, 'imageContainer2')">
-   <div id="imageContainer2" class="image-container"></div>
-
-   <label for="image3">Image 3</label>
-   <input type="file" id="image3" accept="image/*" onchange="loadImage(event, 'imageContainer3')">
-   <div id="imageContainer3" class="image-container"></div>
-
-   <!-- Repeat for more images -->
-</div>
-
-<div class="section">
+   <label for="carImage">Upload Image:</label>
+        <input type="file" id="carImage1" name="carImage" accept="image/*" required><br><br>
+   <input type="file" id="carImage2" accept="image/*"><br>
+     <h4></h4> 
+   <input type="file" id="carImage3" accept="image/*"><br>
+   </div>
+    <div class="section">
    <h2>Ratings</h2>
    <label for="engineRating">Engine Rating</label>
    <select id="engineRating">
@@ -408,8 +407,7 @@
        <option value="1">1</option>
        <option value="2">2</option>
        <option value="3">3</option>
-       <option value="4">4</option>
-       <option value="5">5</option>
+       
    </select>
 
    <label for="transmissionRating">Transmission Rating</label>
@@ -417,15 +415,23 @@
        <option value="1">1</option>
        <option value="2">2</option>
        <option value="3">3</option>
-       <option value="4">4</option>
-       <option value="5">5</option>
+      
    </select>
+   <label for="ovarallrating">ovarallrating</label>
+   <select id="ovarallrating">
+       <option value="5">5</option>
+       <option value="6">6</option>
+       <option value="7">7</option>
+       <option value="8">8</option>
+       <option value="9">9</option>
+       <option value="10">10</option>
+   </select>
+
+
 </div>
     
 
 
-        <label for="carImage">Upload Image:</label>
-        <input type="file" id="carImage" name="carImage" accept="image/*" required><br><br>
 
         <label for="rating">Rating:</label>
         <select id="rating" name="rating" required>
@@ -434,7 +440,7 @@
             <option value="3">3</option>
         </select><br><br>
 
-
+       
 
         <button type="button" onclick="generatePDF()">Generate PDF</button>
         
