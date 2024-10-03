@@ -18,6 +18,9 @@
         <label for="RegistrationNumber">Registration Number:</label>
         <input type="text" id="RegistrationNumber" name="RegistrationNumber" required>
 
+        <label for="Registredowner">Registredowner:</label>
+        <input type="text" id="Registredownerr" name="Registredowner" required>
+
         <label for="Ex-ShowroomPrice">Ex-ShowroomPrice:</label>
         <input type="text" id="ExShowroomPrice" name="Ex-ShowroomPrice"
 
@@ -55,17 +58,46 @@
             <option>Lpg</option>
         </select><br><br>
 
+        <label>ownership:</label>
+        <select id="ownership">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+        </select><br><br>
+
+
+
+
         <label>RTO:</label>
         <input type="text" id="rto"><br><br>
 
         <label>Vehicle Type:</label>
-        <input type="text" id="vehicleType"><br><br>
+        <select id="VehicleType">
+            <option>Privet</option>
+            <option>Taxi</option>
+            <option>Re-registration</option>
+            <option>Scrap</option>
+        </select><br><br>
 
         <label>Manufacturing Month/Year:</label>
         <input type="text" id="manufacturingDate" placeholder="MM/YYYY"><br><br>
 
+
+
+
+
+        //Registration Month Year
+        <label>Registration Month Year:</label>
+        <input type="text" id="RegistrationMonthYear" placeholder="MM/YYYY"><br><br>
+
+
+
+
         <label>RCStatus:</label>
-        <select id="">
+        <select id="RCStatus">
             <option>Good</option>
             <option>Duplicate</option>
             <option>Photocopy</option>
@@ -87,8 +119,8 @@
 
 
 
-   <label for="engineNumber">Engine Number</label>
-   <input type="text" id="engineNumber">
+   <label for="EngineNumber">Engine Number</label>
+   <input type="text" id="EngineNumber">
 
    <label for="vehicleStatus">Vehicle Status</label>
    <input type="text" id="vehicleStatus">
@@ -384,15 +416,7 @@
    </div>
     <div class="section">
    <h2>Ratings</h2>
-   <label for="engineRating">Engine Rating</label>
-   <select id="engineRating">
-       <option value="1">1</option>
-       <option value="2">2</option>
-       <option value="3">3</option>
-       <option value="4">4</option>
-       <option value="5">5</option>
-   </select>
-
+ 
    <label for="exteriorRating">Exterior Rating</label>
    <select id="exteriorRating">
        <option value="1">1</option>
@@ -410,8 +434,8 @@
        
    </select>
 
-   <label for="transmissionRating">Transmission Rating</label>
-   <select id="transmissionRating">
+   <label for="engineRating">engineRating</label>
+   <select id="engineRating">
        <option value="1">1</option>
        <option value="2">2</option>
        <option value="3">3</option>
@@ -433,13 +457,23 @@
 
 
 
-        <label for="rating">Rating:</label>
-        <select id="rating" name="rating" required>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+        <label for="documentrating">Rating:</label>
+        <select id="documentrating" name="documentrating" required>
+            <option value="1">available</option>
+            <option value="2">notavailable</option>
+        
         </select><br><br>
 
+
+
+        <label> Overall Remarks:</label>
+        <select id="OverallRemarks">
+            <option>NO DAMAGE VEHICLE</option>
+            <option>MINOR DAMAGE VEHICLE</option>
+            <option>MAJOR DAMAGE VEHICLE</option>
+        </select>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="Fetching location..." readonly><br><br>
        
 
         <button type="button" onclick="generatePDF()">Generate PDF</button>
@@ -447,5 +481,6 @@
 <script src="script.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
 </body>
 </html>
