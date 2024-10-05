@@ -39,27 +39,6 @@ function generatePDF() {
 
 
 
-// Function to get the current location using Geolocation API
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
-
-
-       // Add location coordinates to the location input field
-       document.getElementById('location').value = `Lat: ${latitude}, Lon: ${longitude}`;
-    });
-} else {
-    alert("Geolocation is not supported by this browser.");
-}
-}
-
-// Call the getLocation function when the page loads
-window.onload = getLocation;
-
-
-const location = document.getElementById('location').value;
 
 
 
@@ -118,7 +97,7 @@ const bl = ' data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QLsRXhpZgAATU0A
     const documentratingValue = document.getElementById('documentrating').value;
     const ownership=document.getElementById('ownership').value;
     const reportrequestedby=document.getElementById('reportrequestedby').value;
- 
+    const status = document.getElementById('status').value.toLowerCase(); // Convert input to lowercase
 //123456
 
 const RCStatus =document.getElementById('RCStatus').value;
@@ -194,7 +173,10 @@ reader1.onload = function(event) {
     doc.rect(5, 107.5, 97, 7.5);  // (x, y, width, height)
     doc.setFillColor(128, 128, 128);  // RGB for GREY
     doc.rect(5, 107.5, 97, 7.5, 'F');   // 'F' fills the box with color
-          
+      
+    
+    //imge box
+    doc.rect(5, 45, 96, 59);  // (x, y, width, height)
     
 //BOX END
 
@@ -222,6 +204,7 @@ doc.circle(88,124,1, 'F');
 
 
 //TEXT
+doc.setFont("helvetica","bold");
 doc.setFontSize(8);
 doc.text("COLOUR",10,120);
 
@@ -266,10 +249,10 @@ doc.text(34.5,32.5, ` ${MODEL}`);
 doc.text(20,32.5,`${Manufaturename}`);
 doc.text(20,37.5,`${varrient}`);
 doc.setFontSize(14);
-doc.text("Ex-Showroom Price :",15,113);
+doc.text("Ex-Showroom Price :",12,113);
 doc.setFontSize(12);
 
-doc.text(60,113,`${ExShowroomPrice}`);
+doc.text(62,113,`${ExShowroomPrice}`);
 doc.setFontSize(12);
 doc.text(9,43,`${inspectionLocation}`);
 doc.setFontSize(12);
@@ -426,7 +409,7 @@ doc.text(" INTEROR ",165.5,76)
 
 
     // Add the first uploaded image to PDF
-    doc.addImage(event.target.result, 'JPEG', 5, 45, 97, 60);
+    doc.addImage(event.target.result, 'JPEG', 6, 46, 94, 57);
 
     // Add rating image based on selected rating
     const documentratingImage = documentratingImages[documentratingValue];
@@ -442,11 +425,275 @@ doc.text(" INTEROR ",165.5,76)
         // Add second uploaded image to the second page of the PDF
         
         doc.addPage(2);
-        doc.text(`Location: ${location}`, 10, 40);
+        
+        
+        doc.rect(6, 2.5, 195, 180);
+        doc.rect(6, 186, 195, 100)
+
+
+
+//1
+
+        doc.rect(105, 15, 92, 10);
+
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 39, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+//2
+        doc.rect(105, 26, 92, 10);
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 50, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+
+//3
+
+        doc.rect(105, 37, 92, 10);
+
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 61, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+
+
+
+//4
+
+        doc.rect(105, 48, 92, 10);
+
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 83, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+
+
+//5
+
+
+        doc.rect(105, 59, 92, 10);
+
+
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 94, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+
+
+
+
+
+//6
+        doc.rect(105, 70, 92, 10);
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 72, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+
+
+
+
+//7
+
+        doc.rect(105, 81, 92,10);
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 83, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+
+
+
+
+//8
+        doc.rect(105, 92, 92, 10);
+
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 94, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+
+
+//9
+
+        doc.rect(105, 103, 92, 10);
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 105, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+//10
+
+
+        doc.rect(105, 114, 92, 10);
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 116, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+
+//11
+        doc.rect(105, 125, 92, 10);
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 127, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+//12
+        doc.rect(105, 136, 92, 10);
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 138, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+
+//13
+        doc.rect(105, 147, 92, 10);
+
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 149, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+//14
+
+        doc.rect(105, 158, 92, 10);
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 160, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+
+//15
+
+        doc.rect(105, 169, 92, 10);
+
+        if (MODEL === "good") {
+            doc.setFillColor("green"); // Green color for "good"
+        } else if (MODEL === "bad") {
+            doc.setFillColor("red"); // Red color for "bad"
+        } else {
+            doc.setFillColor("black"); // Black color for any other input
+        }
+        doc.rect(146, 171, 49, 6, 'F'); // Filled rectangle
+        doc.text(`Status: ${status}`, 108, 20);
+
+
+
+
+
+ // Set box fill color based on the status input
+ if (status === "good") {
+    doc.setFillColor("green"); // Green color for "good"
+} else if (status === "bad") {
+    doc.setFillColor("red"); // Red color for "bad"
+} else {
+    doc.setFillColor("black"); // Black color for any other input
+}
+
+// Draw a filled rectangle (box) based on the status
+doc.rect(146, 17, 49, 6, 'F'); // Filled rectangle
+if (MODEL === "good") {
+    doc.setFillColor("green"); // Green color for "good"
+} else if (MODEL === "bad") {
+    doc.setFillColor("red"); // Red color for "bad"
+} else {
+    doc.setFillColor("black"); // Black color for any other input
+}
+doc.rect(146, 28, 49, 6, 'F'); // Filled rectangle
+doc.text(`Status: ${status}`, 108, 20);
+doc.text(`Status: ${MODEL}`, 108, 31);
+//MODEL
+
+
+        
+        doc.addPage(3);
+
         doc.addImage(event.target.result, 'JPEG', 130, 30, 60, 60);
         reader3.onload = function(event) {
         doc.addImage(event.target.result, 'JPEG', 60, 30, 60, 60);
-        doc.addPage(3);
+
+
+
+
+
         // Add images to the PDF at different sizes and positions
       
 // Create the boxes with respective details
